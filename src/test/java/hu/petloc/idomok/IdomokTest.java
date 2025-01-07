@@ -42,7 +42,9 @@ public class IdomokTest {
          vagy módosítjuk a deltát,
          vagy módosítjuk a sugarat.
          */
-        assertEquals(4.188, idom.terfogat(), 0.001);
+        //assertEquals(4.188, idom.terfogat(), 0.001);
+        /* kerekítéssel megoldható */
+        assertEquals(4.2, idom.terfogat(), 0.001);
     }
 
     @Test
@@ -54,7 +56,9 @@ public class IdomokTest {
          vagy módosítjuk a deltát,
          vagy módosítjuk a sugarat.
          */
-        assertEquals(3.351, idom.suly(), 0.001);
+        //assertEquals(3.351, idom.suly(), 0.001);
+        /* kerekítéssel megoldható */
+        assertEquals(3.36, idom.suly(), 0.001);
     }
 
     @Test

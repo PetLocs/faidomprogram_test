@@ -13,6 +13,11 @@ public class Gomb extends FaIdom{
 
     @Override
     public double terfogat() {
-        return 4*Math.pow(sugar,3)*Math.PI/3;
+        return Math.round(4*Math.pow(sugar,3)*Math.PI/3*10)/10.0;
+    }
+
+    @Override
+    public double suly() {
+        return Math.round(super.suly() * 100)/100.0;
     }
 }

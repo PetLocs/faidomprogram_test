@@ -6,13 +6,14 @@ import hu.petloc.idomok.Hasab;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class FaIdomokProgram {
-    private ArrayList<FaIdom> idomok;
+    private List<FaIdom> idomok;
 
     public FaIdomokProgram() {
         this.idomok = new ArrayList<>();
-        idomok.clear();
     }
 
     public void ujIdom(FaIdom idom){
@@ -20,7 +21,7 @@ public class FaIdomokProgram {
     };
 
     public ArrayList<FaIdom> getLista() {
-        return this.idomok;
+        return new ArrayList<>(idomok);
     }
 
     public double osszSuly() {
@@ -28,7 +29,7 @@ public class FaIdomokProgram {
         for (FaIdom idom : idomok){
             sum += idom.suly();
         }
-        return sum;
+        return Math.round(sum*100)/100.0;
     }
 
     public double gombokOsszSuly() {
@@ -38,7 +39,7 @@ public class FaIdomokProgram {
                 sum += idom.suly();
             }
         }
-        return sum;
+        return Math.round(sum*100)/100.0;
     }
 
     public FaIdom minV() {

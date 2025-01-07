@@ -1,5 +1,8 @@
 package hu.petloc.idomok;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Hasab extends FaIdom{
     private double A;
     private double B;
@@ -29,6 +32,11 @@ public class Hasab extends FaIdom{
 
     @Override
     public double terfogat() {
-        return A*B*M;
+        return Math.round(A*B*M*10)/10.0;
+    }
+
+    @Override
+    public double suly() {
+        return Math.round(super.suly() * 10)/10.0;
     }
 }

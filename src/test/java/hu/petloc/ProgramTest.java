@@ -35,22 +35,15 @@ class ProgramTest {
         Assertions.assertEquals(2, lista.size());
 
         lista.add(new Gomb(1));
-        //Assertions.assertEquals(2, program.getLista().size());
-        /* méret tévesen lett megadva */
-        Assertions.assertEquals(3, program.getLista().size());
+        Assertions.assertEquals(2, program.getLista().size());
     }
 
     @Test
     void testSzamolasok(){
-        //Assertions.assertEquals(4.16, program.osszSuly(), 0.001);
-        //Assertions.assertEquals(3.36, program.gombokOsszSuly(), 0.001);
-        /* hiányzik az első gömb súlya */
-        Assertions.assertEquals(7.502, program.osszSuly(), 0.001);
-        Assertions.assertEquals(6.702, program.gombokOsszSuly(), 0.001);
-
-        //Hasab hasab = new Hasab(1.0, 1.0, 1.0);
-        /* az új idom nem része a listának, ujIdom() metódus szükséges */
+        Assertions.assertEquals(4.16, program.osszSuly(), 0.001);
+        Assertions.assertEquals(3.36, program.gombokOsszSuly(), 0.001);
         Hasab hasab = new Hasab(1.0, 1.0, 1.0);
+        /* az új idom nem része a listának, ujIdom() metódus szükséges */
         program.ujIdom(hasab);
         Assertions.assertEquals(hasab.terfogat(), program.minV().terfogat());
         Gomb gomb = new Gomb(1.0);
