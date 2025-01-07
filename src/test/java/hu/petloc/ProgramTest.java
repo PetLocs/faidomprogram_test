@@ -43,12 +43,8 @@ class ProgramTest {
         Assertions.assertEquals(4.16, program.osszSuly(), 0.001);
         Assertions.assertEquals(3.36, program.gombokOsszSuly(), 0.001);
         Hasab hasab = new Hasab(1.0, 1.0, 1.0);
-        /* az új idom nem része a listának, ujIdom() metódus szükséges */
-        program.ujIdom(hasab);
         Assertions.assertEquals(hasab.terfogat(), program.minV().terfogat());
         Gomb gomb = new Gomb(1.0);
-        /* az új idom nem része a listának, ujIdom() metódus szükséges */
-        program.ujIdom(gomb);
         Assertions.assertEquals(gomb.terfogat(), program.maxV().terfogat());
     }
 }
